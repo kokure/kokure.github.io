@@ -1,0 +1,42 @@
+/* The Overlay (background) */
+.overlay {
+    height: 2.5rem;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    right: 0;
+    top: 0;
+    background-color: rgb(255,255,255); /* Black fallback color */
+    background-color: rgba(255,255,255, 0.55); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 0px;
+    width: 100%; /* 100% width */
+    text-align: right; /* Centered text/links */
+    margin-top: 10px;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    text-decoration: none;
+    padding-top: 10px;
+    padding-right: 2.0rem;
+    padding-left: 1.0rem;
+    font-size: 1.0rem;
+    color: #000;
+    display: inline; /* Display block instead of inline */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: rgba(212, 54, 123, 1.0);
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+}
